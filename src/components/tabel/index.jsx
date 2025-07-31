@@ -14,10 +14,10 @@ import TableLoading from "./tableLoading";
 import TableAdd from "./tableAdd";
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 import IconBox from "./components/IconBox";
-
 import "./style/tanstackTable.css";
 import TableMore from "./tableMore";
 import DateFilter from "./dateFilter";
+import { toggleFullScreen } from "./function/fullScreen";
 
 const TableComponents = ({
   rows,
@@ -75,7 +75,7 @@ const TableComponents = ({
           }}
         >
           <div>
-            <h2>{heading}</h2>
+            <h2 style={{ ...tabelStyles.heading }}>{heading}</h2>
           </div>
 
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -83,7 +83,7 @@ const TableComponents = ({
 
             {isSearch && <TableSearch onChange={onChange} />}
             {isAdd && <TableAdd title={addTitle} path={addPath} />}
-            <IconBox IconName={OpenInFullIcon} />
+            <IconBox IconName={OpenInFullIcon} onClick={toggleFullScreen} />
             {isMore && (
               <TableMore
                 onExport={onExport}

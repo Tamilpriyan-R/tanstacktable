@@ -28,8 +28,9 @@ export const tabelStyles = {
       border: "1px solid #ddd",
     },
     th: {
-      padding: "10px",
-
+      padding: "8px",
+      fontSize:"16px",
+      fontWeight:"600",
       textAlign: "left",
       whiteSpace: "nowrap",
       background: tableColors.headRowColor,
@@ -55,10 +56,17 @@ export const tabelStyles = {
     td: {
       padding: "8px",
       textAlign: "left",
+      fontSize:"16px",
+      fontWeight:"400",
       whiteSpace: "nowrap",
       borderInline: "none",
       background: tableColors.bodyRowColor,
     },
+  },
+  heading: {
+    fontSize: "24px",
+    fontWeight: "600",
+    color: tableColors.secondarColor,
   },
 };
 
@@ -69,7 +77,7 @@ export const tabelPaginationStyles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "10px 5px",
+    padding: "15px 10px",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
   },
   totalrecord: {
@@ -84,11 +92,11 @@ export const tabelPaginationStyles = {
     alignItems: "center",
   },
   lastPageArrows: {
-    fontSize: "32px",
+    fontSize: "28px",
     fontWeight: "600",
   },
   nextPageArrows: {
-    fontSize: "28px",
+    fontSize: "26px",
     fontWeight: "600",
   },
 
@@ -98,7 +106,11 @@ export const tabelPaginationStyles = {
     justifyContent: "space-evenly",
   },
   pageButtons: {
-    padding: "10px 15px",
+    width: "40px",
+    height: "40px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     fontWeight: "600",
     fontSize: "14px",
     margin: "0 4px",
@@ -109,7 +121,11 @@ export const tabelPaginationStyles = {
     color: tableColors?.secondarColor,
   },
   pageButtonActive: {
-    padding: "10px 15px",
+    width: "40px",
+    height: "40px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     fontWeight: "600",
     fontSize: "14px",
     margin: "0 2px",
