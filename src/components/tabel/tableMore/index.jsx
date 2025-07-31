@@ -7,6 +7,7 @@ import { useState } from "react";
 import IconBox from "../components/IconBox";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
+import { tableToolStyles } from "../tableStyles/styles";
 
 const TableMore = ({
   onExport,
@@ -54,7 +55,10 @@ const TableMore = ({
         sx={{ mt: 1 }}
       >
         {isExport && (
-          <MenuItem onClick={handleExport}>
+          <MenuItem
+            onClick={handleExport}
+            sx={{ ...tableToolStyles.moreMenus.menus }}
+          >
             <ListItemIcon>
               <FileDownloadIcon fontSize="small" />
             </ListItemIcon>

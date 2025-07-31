@@ -29,8 +29,8 @@ export const tabelStyles = {
     },
     th: {
       padding: "8px",
-      fontSize:"16px",
-      fontWeight:"600",
+      fontSize: "16px",
+      fontWeight: "600",
       textAlign: "left",
       whiteSpace: "nowrap",
       background: tableColors.headRowColor,
@@ -56,8 +56,8 @@ export const tabelStyles = {
     td: {
       padding: "8px",
       textAlign: "left",
-      fontSize:"16px",
-      fontWeight:"400",
+      fontSize: "16px",
+      fontWeight: "400",
       whiteSpace: "nowrap",
       borderInline: "none",
       background: tableColors.bodyRowColor,
@@ -185,6 +185,12 @@ export const tableToolStyles = {
       color: "#a1a1a1ff",
     },
   },
+  moreMenus:{
+      menus:{
+
+      }
+      
+  }
 };
 
 export const tableDateStyles = {
