@@ -1,8 +1,5 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { MenuItem, Menu, ListItemIcon, ListItemText } from "@mui/material";
-import PersonIcon from "@mui/icons-material/Person";
-import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from "@mui/icons-material/Logout";
 import { useState } from "react";
 import IconBox from "../components/IconBox";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";

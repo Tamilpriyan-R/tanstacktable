@@ -185,12 +185,9 @@ export const tableToolStyles = {
       color: "#a1a1a1ff",
     },
   },
-  moreMenus:{
-      menus:{
-
-      }
-      
-  }
+  moreMenus: {
+    menus: {},
+  },
 };
 
 export const tableDateStyles = {
