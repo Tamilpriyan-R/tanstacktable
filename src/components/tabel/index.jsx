@@ -18,6 +18,7 @@ import "./style/tanstackTable.css";
 import TableMore from "./tableMore";
 import DateFilter from "./dateFilter";
 import { toggleFullScreen } from "./function/fullScreen";
+import TableDataNotFound from "./dataNotFound";
 
 const TanstackTableComponents = ({
   rows,
@@ -82,7 +83,6 @@ const TanstackTableComponents = ({
           style={{
             ...tableToolStyles.container,
           }}
-          
         >
           <div>
             <h2 style={{ ...tabelStyles.heading }}>{heading}</h2>
@@ -114,20 +114,25 @@ const TanstackTableComponents = ({
         {!isLoading && (
           <>
             <div style={{ ...tabelStyles.box }} className="custom-scrollbar">
-              <table style={tabelStyles.tabel}>
-                <TableHead table={table} />
-                <TableBody table={table} />
-              </table>
+              {rows.length === 0 ? (
+                <TableDataNotFound />
+              ) : (
+                <table style={{ ...tabelStyles.tabel }}>
+                  <TableHead table={table} />
+
+                  <TableBody table={table} />
+                </table>
+              )}
             </div>
-            <TablePagination
-              table={table}
-              pagination={pagination}
-              setPagination={setPagination}
-              pageCount={table.getPageCount()}
-              recordCount={recordCount}
-            />
           </>
         )}
+        <TablePagination
+          table={table}
+          pagination={pagination}
+          setPagination={setPagination}
+          pageCount={table.getPageCount()}
+          recordCount={recordCount}
+        />
       </div>
     </div>
   );
