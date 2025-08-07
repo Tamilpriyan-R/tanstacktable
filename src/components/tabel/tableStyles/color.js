@@ -8,8 +8,7 @@ export const tableColors = {
   )`,
   light: "#FFFFFF",
   dark: "#000000",
-  bodyRowColor:"#ffffffff",
-  headRowColor:"#f1f1f1f5",
-  backGroundColor:"#ffffffea"
-
+  bodyRowColor: "#ffffffff",
+  headRowColor: "#f1f1f1f5",
+  backGroundColor: "#ffffffea",
 };

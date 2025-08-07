@@ -9,7 +9,7 @@ export const tabelStyles = {
   box: {
     overflowX: "auto",
     width: "100%",
-    height: "470px",
+    height: "465px",
     boxSizing: "border-box",
   },
   tabel: {
@@ -28,9 +28,9 @@ export const tabelStyles = {
       border: "1px solid #ddd",
     },
     th: {
-      padding: "8px",
-      fontSize: "16px",
-      fontWeight: "600",
+      padding: "6px",
+      fontSize: "14px",
+      fontWeight: "700",
       textAlign: "left",
       whiteSpace: "nowrap",
       background: tableColors.headRowColor,
@@ -54,9 +54,9 @@ export const tabelStyles = {
       boxShadow: "0 4px 6px -4px rgba(141, 141, 141, 0.2)",
     },
     td: {
-      padding: "8px",
+      padding: "4px",
       textAlign: "left",
-      fontSize: "16px",
+      fontSize: "13px",
       fontWeight: "400",
       whiteSpace: "nowrap",
       borderInline: "none",
@@ -64,7 +64,7 @@ export const tabelStyles = {
     },
   },
   heading: {
-    fontSize: "24px",
+    fontSize: "20px",
     fontWeight: "600",
     color: tableColors.secondarColor,
   },
@@ -77,70 +77,61 @@ export const tabelPaginationStyles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "15px 10px",
-    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    padding: "16px",
+    background: "#f9f9f9",
+    // borderTop: "1px solid #ddd",
+    boxShadow: "0px -2px 6px rgba(80, 80, 80, 0.05)",
   },
-  totalrecord: {
+  info: {
     fontSize: "14px",
+    color: "#333",
+    fontWeight: "500",
   },
-  box: {
+  controls: {
     display: "flex",
-    maxWidth: "400px",
-    minWidth: "400px",
-
-    justifyContent: "space-evenly",
     alignItems: "center",
+    gap: "10px",
   },
-  lastPageArrows: {
-    fontSize: "28px",
-    fontWeight: "600",
-  },
-  nextPageArrows: {
+  arrowIcon: {
     fontSize: "26px",
-    fontWeight: "600",
-  },
-
-  pageButtonsBox: {
-    width: "70%",
-    display: "flex",
-    justifyContent: "space-evenly",
-  },
-  pageButtons: {
-    width: "40px",
-    height: "40px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontWeight: "600",
-    fontSize: "14px",
-    margin: "0 4px",
-    background: "none",
-    border: "none",
-    borderRadius: "50%",
+    color: "#555",
     cursor: "pointer",
-    color: tableColors?.secondarColor,
+    transition: "transform 0.2s ease",
+  },
+  arrowDisabled: {
+    opacity: 0.4,
+    cursor: "not-allowed",
+  },
+  pageButtonsContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    margin: "0 10px",
+  },
+  pageButton: {
+    minWidth: "30px",
+    height: "30px",
+    borderRadius: "50%",
+    background: "linear-gradient(145deg, #e0e0e0, #ffffff)",
+    border: "none",
+    color: "#333",
+    fontWeight: "600",
+    fontSize: "12px",
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+  },
+  pageButtonHover: {
+    background: "#e4f0ff",
+    borderColor: "#90caf9",
   },
   pageButtonActive: {
-    width: "40px",
-    height: "40px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontWeight: "600",
-    fontSize: "14px",
-    margin: "0 2px",
-    background: tableColors?.primaryColor,
-    border: "none",
-    borderRadius: "50%",
-    cursor: "pointer",
-    color: tableColors?.light,
+    background: tableColors.primaryColor,
+    color: "#fff",
+    // border: "1px solid #1976d2",
   },
-  pageDotsButton: {
-    all: "unset",
+  dots: {
+    color: "#888",
     fontWeight: "600",
-    fontSize: "14px",
-    cursor: "default",
-    color: tableColors?.secondarColor,
   },
 };
 
@@ -212,5 +203,29 @@ export const tableDateStyles = {
     padding: "0px 10px",
     fontSize: "14px",
     outline: "0",
+  },
+};
+
+export const tableActionStyles = {
+  container: {
+    display: "flex",
+
+    alignItems: "center",
+  },
+  icon: {
+    marginRight: "10px",
+    color: "grey",
+    fontSize: "20px",
+    cursor: "pointer",
+  },
+};
+
+export const tableStatusCard = {
+  box: {
+    padding: "2px 10px",
+    display: "inline-block",
+    borderRadius: "5px",
+    fontWeight: "600",
+    fontSize: "12px",
   },
 };

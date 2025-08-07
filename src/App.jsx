@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import TableComponents from "./components/tabel";
 
@@ -434,7 +432,7 @@ function App() {
         pageCount={4}
         onChange={handleChange}
         recordCount={45}
-        addTitle="Add"
+        addTitle="Add Policy Reader"
         heading="Policy Reader List"
         isLoading={false} // loading enable
         isMore={true} // More options Enable

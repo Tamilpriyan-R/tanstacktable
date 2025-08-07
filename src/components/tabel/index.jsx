@@ -8,7 +8,7 @@ import TableHead from "./tableHead";
 import TableBody from "./tableBody";
 import TablePagination from "./tablePagination";
 import { tabelStyles, tableToolStyles } from "./tableStyles/styles";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import TableSearch from "./tableSearch";
 import TableLoading from "./tableLoading";
 import TableAdd from "./tableAdd";
@@ -19,7 +19,7 @@ import TableMore from "./tableMore";
 import DateFilter from "./dateFilter";
 import { toggleFullScreen } from "./function/fullScreen";
 
-const TableComponents = ({
+const TanstackTableComponents = ({
   rows,
   columns,
   pagination,
@@ -39,6 +39,7 @@ const TableComponents = ({
   onUpload,
   isExport,
   isUpload,
+  handleAdd,
   isMore = true,
 }) => {
   const [sorting, setSorting] = useState([]);
@@ -66,13 +67,22 @@ const TableComponents = ({
     },
   });
 
+  const tabelRef = useRef(null);
+
+  const handleToggleFullscreen = () => {
+    if (tabelRef.current) {
+      toggleFullScreen(tabelRef.current);
+    }
+  };
+
   return (
-    <div style={{ padding: "0px 5px", overflow: "hidden" }}>
-      <div style={{ ...tabelStyles.container }}>
+    <div style={{ padding: "0px 5px", marginTop: "-20px", overflow: "hidden" }}>
+      <div ref={tabelRef} style={{ ...tabelStyles.container }}>
         <div
           style={{
             ...tableToolStyles.container,
           }}
+          
         >
           <div>
             <h2 style={{ ...tabelStyles.heading }}>{heading}</h2>
@@ -82,8 +92,13 @@ const TableComponents = ({
             {isDateFilter && <DateFilter dateChange={dateChange} />}
 
             {isSearch && <TableSearch onChange={onChange} />}
-            {isAdd && <TableAdd title={addTitle} path={addPath} />}
-            <IconBox IconName={OpenInFullIcon} onClick={toggleFullScreen} />
+            {isAdd && (
+              <TableAdd title={addTitle} path={addPath} handleAdd={handleAdd} />
+            )}
+            <IconBox
+              IconName={OpenInFullIcon}
+              onClick={handleToggleFullscreen}
+            />
             {isMore && (
               <TableMore
                 onExport={onExport}
@@ -118,4 +133,4 @@ const TableComponents = ({
   );
 };
 
-export default TableComponents;
+export default TanstackTableComponents;
